@@ -1,0 +1,11 @@
+
+> msf-sim@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.2 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.5.31.205:3000
+✓ Ready in 264ms
+
+ GET / 200 in 2.0s (next.js: 1893ms, application-code: 123ms)
+[?25h

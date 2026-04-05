@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0f;
+  --console-bg: #0d1117;
+  --accent-green: #00ff41;
+  --accent-red: #ff0055;
+  --accent-cyan: #00b4d8;
+  --text-primary: #e6edf3;
+  --text-muted: #6e7681;
+  --border: #21262d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-mconsole: var(--console-bg);
+  --color-acgreen: var(--accent-green);
+  --color-acred: var(--accent-red);
+  --color-accyan: var(--accent-cyan);
+  --color-tprimary: var(--text-primary);
+  --color-tmuted: var(--text-muted);
+  --color-border: var(--border);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  min-height: 100vh;
+}
+
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0,0,0,0.1) 50%,
+    rgba(0,0,0,0.1)
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: var(--accent-green);
+  animation: blink 1s infinite;
+}
+
+.glow {
+  text-shadow: 0 0 5px var(--accent-green), 0 0 10px var(--accent-green);
+}
+
+.console-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.console-scroll::-webkit-scrollbar-track {
+  background: var(--console-bg);
+}
+
+.console-scroll::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.console-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
