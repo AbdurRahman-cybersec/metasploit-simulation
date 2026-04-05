@@ -67,9 +67,14 @@ export default function MsfconsolePage() {
             <h1 className="text-xl font-bold text-[#00ff41]">Task 3: Msfconsole</h1>
             <p className="text-sm text-[#6e7681]">Mastering the Metasploit Console</p>
           </div>
-          <Link href="/" className="px-4 py-2 bg-[#00ff41] text-black font-bold rounded hover:bg-[#00cc33]">
-            ← Back to Main
-          </Link>
+          <div className="flex gap-2">
+            <Link href="/" className="px-4 py-2 bg-[#161b22] text-[#e6edf3] rounded hover:bg-[#21262d]">
+              ← Main
+            </Link>
+            <Link href="/modules" className="px-4 py-2 bg-[#00ff41] text-black font-bold rounded hover:bg-[#00cc33]">
+              Task 4 →
+            </Link>
+          </div>
         </div>
       </header>
 

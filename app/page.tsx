@@ -17,9 +17,14 @@ export default function Home() {
             <h1 className="text-xl font-bold text-[#00ff41]">Metasploit Framework Simulation</h1>
             <p className="text-sm text-[#6e7681]">Interactive learning tool for understanding Metasploit concepts</p>
           </div>
-          <Link href="/msfconsole" className="px-4 py-2 bg-[#00b4d8] text-black font-bold rounded hover:bg-[#0099cc]">
-            Task 3: Msfconsole →
-          </Link>
+          <div className="flex gap-2">
+            <Link href="/msfconsole" className="px-3 py-1 bg-[#00b4d8] text-black text-sm font-bold rounded hover:bg-[#0099cc]">
+              Task 3
+            </Link>
+            <Link href="/modules" className="px-3 py-1 bg-[#00ff41] text-black text-sm font-bold rounded hover:bg-[#00cc33]">
+              Task 4 →
+            </Link>
+          </div>
         </div>
       </header>
 
