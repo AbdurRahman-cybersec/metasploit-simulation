@@ -4,6 +4,7 @@ import ConceptCards from "./components/ConceptCards";
 import PayloadTypes from "./components/PayloadTypes";
 import HelpBar from "./components/HelpBar";
 import MetasploitDiagram from "./components/MetasploitDiagram";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -11,8 +12,15 @@ export default function Home() {
       <div className="scanline"></div>
       
       <header className="border-b border-[#21262d] p-4 bg-[#161b22]">
-        <h1 className="text-xl font-bold text-[#00ff41]">Metasploit Framework Simulation</h1>
-        <p className="text-sm text-[#6e7681]">Interactive learning tool for understanding Metasploit concepts</p>
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <div>
+            <h1 className="text-xl font-bold text-[#00ff41]">Metasploit Framework Simulation</h1>
+            <p className="text-sm text-[#6e7681]">Interactive learning tool for understanding Metasploit concepts</p>
+          </div>
+          <Link href="/msfconsole" className="px-4 py-2 bg-[#00b4d8] text-black font-bold rounded hover:bg-[#0099cc]">
+            Task 3: Msfconsole →
+          </Link>
+        </div>
       </header>
 
       <main className="p-4 md:p-8 max-w-7xl mx-auto">
